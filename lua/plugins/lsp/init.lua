@@ -4,7 +4,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-            "WhoIsSethDaniel/mason-tool-installer.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{ "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
 			{ "antosha417/nvim-lsp-file-operations", config = true },
 			{ "j-hui/fidget.nvim", opts = {} },
@@ -26,6 +26,7 @@ return {
 				"lua-language-server",
 				"emmet_ls",
 				"jsonls",
+				"vue-language-server",
 			})
 			require("mason-tool-installer").setup({
 				ensure_installed = {
@@ -35,6 +36,7 @@ return {
 					"black",
 					"pylint",
 					"eslint_d",
+					"markdownlint",
 				},
 			})
 

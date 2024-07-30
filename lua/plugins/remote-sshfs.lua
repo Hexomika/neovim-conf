@@ -1,8 +1,23 @@
 return {
 	"nosduco/remote-sshfs.nvim",
 	dependencies = { "nvim-telescope/telescope.nvim" },
-	opts = {
-		-- Refer to the configuration section below
-		-- or leave empty for defaults
-	},
+	config = function()
+		require("remote-sshfs").setup({
+
+			handlers = {
+				on_connect = {
+					change_dir = true,
+				},
+				on_disconnect = {
+					clean_mount_folders = true,
+				},
+			},
+			ui = {
+				confirm = {
+					connect = false,
+					change_dir = true,
+				},
+			},
+		})
+	end,
 }

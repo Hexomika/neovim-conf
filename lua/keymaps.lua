@@ -17,7 +17,8 @@ vim.api.nvim_set_keymap("n", "Q", "", opts) -- unmap key
 vim.api.nvim_set_keymap("n", "<leader>x", ":!chmod +x %<cr>", opts) -- set current buffer to executable
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv'", opts)
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv'", opts) -- intervert lines
-vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
-vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
+-- vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
+-- vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
 -- vim.api.nvim_set_keymap("n", "<C-w>", ":bdelete!<cr>", opts) -- removes buffer
+vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", opts) -- open or close neovim menu

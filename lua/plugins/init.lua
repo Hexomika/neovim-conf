@@ -35,6 +35,8 @@ local plugins = {
 	require("plugins.others"),
 	require("plugins.project"),
 	require("plugins.which-key"),
+	require("plugins.remote-sshfs"),
+	require("plugins.neotree"),
 }
 
 require("lazy").setup(plugins)

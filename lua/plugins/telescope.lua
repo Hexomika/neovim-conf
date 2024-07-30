@@ -10,9 +10,10 @@ return {
 		local telescope = require("telescope")
 
 		telescope.setup({})
-		telescope.load_extension("fzf")
-		telescope.load_extension("conventional_commits")
-		telescope.load_extension("projects")
+		telescope.load_extension("fzf") -- search plugin
+		telescope.load_extension("conventional_commits") -- git plugin
+		telescope.load_extension("projects") -- projects plugin
+		telescope.load_extension("remote-sshfs") -- remote ssh plugin
 
 		local builtin = require("telescope.builtin")
 
@@ -27,6 +28,9 @@ return {
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string)
 		vim.keymap.set("n", "<leader>sg", builtin.live_grep)
 		vim.keymap.set("n", "<leader>sd", builtin.diagnostics)
+		vim.keymap.set("c", "<C-p>", builtin.commands)
+		vim.keymap.set("c", "<C-r>", builtin.command_history)
 		vim.keymap.set("n", "<leader>r", "<cmd>Telescope projects<cr>")
+		vim.keymap.set("n", "<leader>ssh", "<cmd>RemoteSSHFSConnect<cr>")
 	end,
 }
