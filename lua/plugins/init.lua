@@ -27,7 +27,14 @@ local plugins = {
 	require("plugins.comment"),
 	require("plugins.git"),
 	require("plugins.format"),
-	require("plugins.harpoon-tabline"),
+	-- require("plugins.harpoon-tabline"),
+	require("plugins.bufferline"),
+	-- require("plugins.neotest"),
+	require("plugins.trouble"),
+	require("plugins.nvim-lint"),
+	require("plugins.others"),
+	require("plugins.project"),
+	require("plugins.which-key"),
 }
 
 require("lazy").setup(plugins)

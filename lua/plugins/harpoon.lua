@@ -5,7 +5,7 @@ return {
 	config = function()
 		local harpoon = require("harpoon")
 
-		require("harpoon-tabline").setup()
+		-- require("harpoon-tabline").setup()
 
 		harpoon:setup({})
 
@@ -74,7 +74,9 @@ return {
 
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
-		end)
+		end, {
+			desc = "Add persisted buffer",
+		})
 		vim.keymap.set("n", "<C-n>", function()
 			harpoon:list():next()
 		end)

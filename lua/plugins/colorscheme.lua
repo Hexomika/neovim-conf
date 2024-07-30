@@ -1,6 +1,6 @@
 return {
-    "marko-cerovac/material.nvim",
-    config = function()
-        vim.cmd.colorscheme("material-darker")
-    end,
+	"rebelot/kanagawa.nvim",
+	config = function()
+		vim.cmd.colorscheme("kanagawa-wave")
+	end,
 }

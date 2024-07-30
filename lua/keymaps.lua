@@ -20,3 +20,4 @@ vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv'", opts) -- intervert lines
 vim.api.nvim_set_keymap("n", "$", "<C-a>", opts) -- increment number
 vim.api.nvim_set_keymap("n", "£", "<C-x>", opts) -- decrement number
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
+-- vim.api.nvim_set_keymap("n", "<C-w>", ":bdelete!<cr>", opts) -- removes buffer
