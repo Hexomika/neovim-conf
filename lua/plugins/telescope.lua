@@ -12,7 +12,7 @@ return {
 		telescope.setup({})
 		telescope.load_extension("fzf") -- search plugin
 		telescope.load_extension("conventional_commits") -- git plugin
-		telescope.load_extension("projects") -- projects plugin
+		-- telescope.load_extension("projects") -- projects plugin
 		telescope.load_extension("remote-sshfs") -- remote ssh plugin
 
 		local builtin = require("telescope.builtin")
@@ -52,7 +52,11 @@ return {
 		vim.keymap.set("c", "<C-r>", builtin.command_history, {
 			desc = "Command history",
 		})
-		vim.keymap.set("n", "<leader>r", "<cmd>Telescope projects<cr>", {
+		-- vim.keymap.set("n", "<leader>r", "<cmd>Telescope projects<cr>", {
+		-- 	desc = "Telescope projects",
+		-- })
+
+		vim.keymap.set("n", "<leader>r", "<cmd>Telescope neovim-project discover<cr>", {
 			desc = "Telescope projects",
 		})
 		vim.keymap.set("n", "<leader>ssh", "<cmd>RemoteSSHFSConnect<cr>", {

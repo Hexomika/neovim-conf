@@ -27,6 +27,7 @@ return {
 				"emmet_ls",
 				"jsonls",
 				"vue-language-server",
+				"djlint",
 			})
 			require("mason-tool-installer").setup({
 				ensure_installed = {
@@ -37,6 +38,7 @@ return {
 					"pylint",
 					"eslint_d",
 					"markdownlint",
+					"djlint",
 				},
 			})
 

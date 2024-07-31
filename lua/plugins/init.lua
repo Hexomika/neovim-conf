@@ -33,7 +33,8 @@ local plugins = {
 	require("plugins.trouble"),
 	require("plugins.nvim-lint"),
 	require("plugins.others"),
-	require("plugins.project"),
+	-- require("plugins.project"),
+	require("plugins.neovim-project"),
 	require("plugins.which-key"),
 	require("plugins.remote-sshfs"), -- remote ssh
 	require("plugins.neotree"), -- tree

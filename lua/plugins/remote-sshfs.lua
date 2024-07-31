@@ -13,6 +13,7 @@ return {
 				},
 			},
 			ui = {
+				select_prompts = false,
 				confirm = {
 					connect = false,
 					change_dir = true,
