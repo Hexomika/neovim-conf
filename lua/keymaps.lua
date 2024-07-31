@@ -22,3 +22,4 @@ vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv'", opts) -- intervert lines
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
 -- vim.api.nvim_set_keymap("n", "<C-w>", ":bdelete!<cr>", opts) -- removes buffer
 vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", opts) -- open or close neovim menu
+vim.api.nvim_set_keymap("n", "<leader>œ", ":OpenGnomeTerminal<CR>", opts) -- open or close neovim menu
