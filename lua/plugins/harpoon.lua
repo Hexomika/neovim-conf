@@ -79,21 +79,33 @@ return {
 		})
 		vim.keymap.set("n", "<C-n>", function()
 			harpoon:list():next()
-		end)
+		end, {
+			desc = "Harpoon list next",
+		})
 		vim.keymap.set("n", "<C-p>", function()
 			harpoon:list():prev()
-		end)
+		end, {
+			desc = "Harpoon list prev",
+		})
 		vim.keymap.set("n", "<C-&>", function()
 			harpoon:list():select(1)
-		end)
+		end, {
+			desc = "Harpoon list select 1",
+		})
 		vim.keymap.set("n", "<C-é>", function()
 			harpoon:list():select(2)
-		end)
+		end, {
+			desc = "Harpoon list select 2",
+		})
 		vim.keymap.set("n", '<C-">', function()
 			harpoon:list():select(3)
-		end)
+		end, {
+			desc = "Harpoon list select 3",
+		})
 		vim.keymap.set("n", "<C-'>", function()
 			harpoon:list():select(4)
-		end)
+		end, {
+			desc = "Harpoon list select 4",
+		})
 	end,
 }

@@ -5,6 +5,8 @@ return {
 
 		vim.keymap.set("n", "<leader>tt", function()
 			require("trouble").toggle("workspace_diagnostics")
-		end)
+		end, {
+			desc = "Workspace diagnostics",
+		})
 	end,
 }

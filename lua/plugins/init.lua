@@ -17,7 +17,7 @@ local plugins = {
 	require("plugins.harpoon"),
 	require("plugins.telescope"),
 	require("plugins.oil"),
-	require("plugins.cmp"),
+	require("plugins.cmp"), -- auto complexion
 	require("plugins.lsp"),
 	require("plugins.lazydev"),
 	require("plugins.winbar"),
@@ -35,8 +35,11 @@ local plugins = {
 	require("plugins.others"),
 	require("plugins.project"),
 	require("plugins.which-key"),
-	require("plugins.remote-sshfs"),
-	require("plugins.neotree"),
+	require("plugins.remote-sshfs"), -- remote ssh
+	require("plugins.neotree"), -- tree
+	require("plugins.flash"), -- fast seach
+	require("plugins.indentmini"), -- indent bar
+	require("plugins.glow"), -- preview md
 }
 
 require("lazy").setup(plugins)

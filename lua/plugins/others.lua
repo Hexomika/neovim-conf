@@ -30,10 +30,14 @@ return {
 
 			vim.keymap.set("n", "<leader>tn", function()
 				todo_comments.jump_next()
-			end)
+			end, {
+				desc = "Todo comments",
+			})
 			vim.keymap.set("n", "<leader>tp", function()
 				todo_comments.jump_prev()
-			end)
+			end, {
+				desc = "Todo Jump",
+			})
 
 			todo_comments.setup({})
 		end,
