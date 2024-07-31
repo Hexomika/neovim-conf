@@ -40,6 +40,7 @@ local plugins = {
 	require("plugins.flash"), -- fast seach
 	require("plugins.indentmini"), -- indent bar
 	require("plugins.glow"), -- preview md
+	require("plugins.diffview"), -- git diffview
 }
 
 require("lazy").setup(plugins)
