@@ -5,7 +5,10 @@ return {
 		projects = {
 			"~/Documents/projects/hexolis/python/*",
 			"~/.config/nvim",
-			"~/.sshfs/swiv/projects/*", -- glob pattern is supported
+			"~/.sshfs/swiv/projects/js/*", -- glob pattern is supported
+			"~/.sshfs/swiv/projects/js/capacitor/*", -- glob pattern is supported
+			"~/.sshfs/swiv/projects/python/*", -- glob pattern is supported
+			"~/.sshfs/swiv/argamato/clients/*", -- glob pattern is supported
 		},
 		-- path to store history and sessions
 		datapath = vim.fn.stdpath("data"), -- ~/.local/share/nvim/

@@ -19,16 +19,25 @@ return {
 			)
 
 			require("mason").setup({
-				"tsserver",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"lua-language-server",
+				"typescript",
+				"html-ls",
+				"css-ls",
+				"volar",
 				"emmet_ls",
-				"jsonls",
-				"vue-language-server",
+				"json-ls",
 				"djlint",
+				"yamlls",
 			})
+
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"yamlls",
+					"volar ",
+					"tsserver",
+				},
+			})
+
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"prettier",
@@ -39,6 +48,8 @@ return {
 					"eslint_d",
 					"markdownlint",
 					"djlint",
+					"volar",
+					"yamlls",
 				},
 			})
 
