@@ -56,3 +56,5 @@ gnome-terminal -- bash -c "
 ```
 :checkhealth = check the health of the nvim install
 ```
+
+Font: https://github.com/tonsky/FiraCode

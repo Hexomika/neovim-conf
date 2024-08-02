@@ -17,11 +17,11 @@ return {
 				vim.lsp.protocol.make_client_capabilities(),
 				require("cmp_nvim_lsp").default_capabilities()
 			)
-
+			require("neoconf").setup({})
 			require("mason").setup({
 				"typescript",
 				"html-ls",
-				"css-ls",
+				"cssls",
 				"volar",
 				"emmet_ls",
 				"json-ls",
@@ -33,8 +33,9 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"yamlls",
-					"volar ",
+					"volar",
 					"tsserver",
+					"eslint",
 				},
 			})
 
@@ -44,12 +45,10 @@ return {
 					"stylua",
 					"isort",
 					"black",
-					"pylint",
-					"eslint_d",
+					"xmlformatter",
 					"markdownlint",
 					"djlint",
-					"volar",
-					"yamlls",
+					"prettierd",
 				},
 			})
 

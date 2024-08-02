@@ -15,12 +15,12 @@ return {
 		vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
 		-- custom command to git diff the currently selected node under the cursor
-		local function git_diff_split(state)
-			local node = state.tree:get_node()
-			vim.cmd("wincmd w")
-			vim.cmd("e " .. node.path)
-			vim.cmd("Gdiffsplit")
-		end
+		-- local function git_diff_split(state)
+		-- 	local node = state.tree:get_node()
+		-- 	vim.cmd("wincmd w")
+		-- 	vim.cmd("e " .. node.path)
+		-- 	vim.cmd("Gdiffsplit")
+		-- end
 
 		require("neo-tree").setup({
 			close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
@@ -50,7 +50,7 @@ return {
 					last_indent_marker = "└",
 					highlight = "NeoTreeIndentMarker",
 					-- expander config, needed for nesting files
-					with_expanders = nil, -- if nil and file nesting is enabled, will enable expanders
+					with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
 					expander_collapsed = "",
 					expander_expanded = "",
 					expander_highlight = "NeoTreeExpander",
@@ -290,7 +290,7 @@ return {
 						["on"] = { "order_by_name", nowait = false },
 						["os"] = { "order_by_size", nowait = false },
 						["ot"] = { "order_by_type", nowait = false },
-						["gd"] = git_diff_split,
+						-- ["gd"] = git_diff_split,
 					},
 				},
 			},
