@@ -4,6 +4,7 @@ return {
 		-- project directories
 		projects = {
 			"~/Documents/projects/hexolis/python/*",
+			"~/Documents/projects/perso/lua/*",
 			"~/.config/nvim",
 			"~/.sshfs/swiv/projects/js/*", -- glob pattern is supported
 			"~/.sshfs/swiv/projects/js/capacitor/*", -- glob pattern is supported

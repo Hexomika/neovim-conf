@@ -1,6 +1,6 @@
 local opts = {
 	noremap = true,
-	silent = false,
+	silent = true,
 }
 
 --vim.api.nvim_set_keymap("n", "<leader>pv", ":Ex<cr>", opts) -- NETRW
@@ -23,3 +23,5 @@ vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highligh
 -- vim.api.nvim_set_keymap("n", "<C-w>", ":bdelete!<cr>", opts) -- removes buffer
 vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", opts) -- open or close neovim menu
 vim.api.nvim_set_keymap("n", "<leader>œ", ":OpenGnomeTerminal<CR>", opts) -- open or close neovim menu
+vim.api.nvim_set_keymap("n", "<C-PageUp>", ":vertical resize +2<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-PageDown>", ":vertical resize -2<CR>", opts)

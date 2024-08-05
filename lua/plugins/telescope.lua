@@ -12,8 +12,6 @@ return {
 		telescope.setup({})
 		telescope.load_extension("fzf") -- search plugin
 		telescope.load_extension("conventional_commits") -- git plugin
-		-- telescope.load_extension("projects") -- projects plugin
-		telescope.load_extension("remote-sshfs") -- remote ssh plugin
 
 		local builtin = require("telescope.builtin")
 
