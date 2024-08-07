@@ -8,6 +8,9 @@ return {
 	},
 	config = function()
 		require("remote-nvim").setup({
+			git = {
+				repository_url = "https://github.com/Hexomika/neovim-conf.git",
+			},
 			remote = {
 				app_name = "nvim",
 				copy_dirs = {
@@ -15,10 +18,6 @@ return {
 					config = {
 						base = vim.fn.stdpath("config"),
 						dirs = "*",
-						exclude_dirs = {
-							".git",
-							".",
-						},
 						compressio = {
 							enabled = false,
 							additional_opts = {},
