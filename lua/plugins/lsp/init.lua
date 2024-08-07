@@ -18,39 +18,36 @@ return {
 				require("cmp_nvim_lsp").default_capabilities()
 			)
 
-			require("mason").setup({
-				"typescript",
-				"html-ls",
-				"cssls",
-				"volar",
+			local lsp_servers = {
+				"html",
+				"lua_ls",
 				"emmet_ls",
-				"json-ls",
-				"djlint",
+				"cssls",
 				"yamlls",
-			})
+				"volar",
+				"tsserver",
+				"eslint",
+				"bashls",
+				"jinja_lsp",
+				"jsonls",
+				"markdown_oxide",
+				"pylsp",
+				"svelte",
+				"nginx_language_server",
+				"cmake",
+				"csharp_ls",
+				"css_variables",
+				"docker_compose_language_service",
+				"dockerls",
+				-- "gitlab_ci_ls",
+				"intelephense",
+			}
+
+			require("mason").setup(lsp_servers)
 
 			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-					"yamlls",
-					"volar",
-					"tsserver",
-					"eslint",
-					"bashls",
-					"jinja_lsp",
-					"jsonls",
-					"markdown_oxide",
-					"pylsp",
-					"svelte",
-					"nginx_language_server",
-					"cmake",
-					"csharp_ls",
-					"css_variables",
-					"docker_compose_language_service",
-					"dockerls",
-					-- "gitlab_ci_ls",
-					"intelephense",
-				},
+				ensure_installed = lsp_servers,
+				automatic_installation = true,
 			})
 
 			require("mason-tool-installer").setup({
@@ -67,13 +64,22 @@ return {
 					"beautysh",
 					"yamlfix",
 				},
+				run_on_start = true,
 			})
 
 			require("mason-lspconfig").setup_handlers({
+				["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
+				-- jinja
+				["jinja_lsp"] = function()
+					require("lspconfig").jinja_lsp.setup({
+						capabilities = capabilities,
+						filetypes = { "htmldjango", "jinja", "jinja.html" },
+					})
+				end,
+
 				function(server_name)
 					require("lspconfig")[server_name].setup({ capabilities = capabilities })
 				end,
-				["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
