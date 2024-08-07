@@ -36,6 +36,7 @@ return {
 					"volar",
 					"tsserver",
 					"eslint",
+					"bashls",
 				},
 			})
 
@@ -49,6 +50,9 @@ return {
 					"markdownlint",
 					"djlint",
 					"prettierd",
+					"html",
+					"beautysh",
+					"yamlfix",
 				},
 			})
 

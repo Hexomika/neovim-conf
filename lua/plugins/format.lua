@@ -15,8 +15,19 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 				python = { "black" },
+				html = { "prettier" },
+				jinja = { "djlint" },
+				vue = { "prettier", "eslint_d" },
+				htmldjango = { "djlint" },
+				markdown = { "markdownlint" },
+				bash = { "beautysh" },
+				-- php = { "php_cs_fixer" },
 			},
 			format_on_save = format_options,
+			-- Conform will notify you when a formatter errors
+			notify_on_error = true,
+			-- Conform will notify you when no formatters are available for the buffer
+			notify_no_formatters = true,
 		})
 
 		vim.keymap.set("n", "<leader>f", function()
