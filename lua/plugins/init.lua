@@ -28,7 +28,6 @@ local plugins = {
 	require("plugins.comment"),
 	require("plugins.git"),
 	require("plugins.format"),
-	-- require("plugins.harpoon-tabline"),
 	require("plugins.bufferline"),
 	-- require("plugins.neotest"),
 	require("plugins.trouble"),
@@ -45,6 +44,7 @@ local plugins = {
 	require("plugins.lightbulb"),
 	require("plugins.friendly-snippets"),
 	require("plugins.remote"),
+	require("plugins.venv-selector"),
 }
 
 require("lazy").setup(plugins)

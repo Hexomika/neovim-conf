@@ -69,6 +69,21 @@ return {
 
 			require("mason-lspconfig").setup_handlers({
 				["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
+				["pylsp"] = function()
+					require("lspconfig").pylsp.setup({
+						capabilities = capabilities,
+						settings = {
+							pylsp = {
+								plugins = {
+									pyflakes = { enabled = false },
+									pylint = { enabled = false },
+									black = { enabled = true },
+									isort = { enabled = true },
+								},
+							},
+						},
+					})
+				end,
 				-- jinja
 				["jinja_lsp"] = function()
 					require("lspconfig").jinja_lsp.setup({

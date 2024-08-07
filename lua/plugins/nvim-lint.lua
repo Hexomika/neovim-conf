@@ -11,6 +11,8 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			python = { "pylint" },
+			django = { "djlint" },
+			markdown = { "markdownlint" },
 		}
 
 		eslint.args = {

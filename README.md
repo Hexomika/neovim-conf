@@ -5,6 +5,7 @@ Put the current repository into your ~/.config/nvim/ folder and then start neovi
 ```
 sudo apt install fzf
 sudo apt-get install ripgrep
+sudo apt install fd-find
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
@@ -50,11 +51,10 @@ gnome-terminal -- bash -c "
 "
 ```
 
-
 ## Glossary
 
 ```
 :checkhealth = check the health of the nvim install
 ```
 
-Font: https://github.com/tonsky/FiraCode
+Font: <https://github.com/tonsky/FiraCode>
