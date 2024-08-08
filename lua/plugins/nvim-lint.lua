@@ -10,10 +10,21 @@ return {
 			typescript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
-			python = { "pylint" },
+			python = { "pylint", "flake8" },
 			django = { "djlint" },
 			markdown = { "markdownlint" },
 		}
+
+		-- Set running linters on buffer save
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+			callback = function()
+				require("lint").try_lint()
+			end,
+		})
+
+		-- Set pylint to work in virtualenv
+		require("lint").linters.pylint.cmd = "python"
+		require("lint").linters.pylint.args = { "-m", "pylint", "-f", "json" }
 
 		eslint.args = {
 			"--no-warn-ignored",

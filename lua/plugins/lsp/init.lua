@@ -63,6 +63,9 @@ return {
 					"html",
 					"beautysh",
 					"yamlfix",
+					"flake8",
+					"sonarlint-language-server",
+					"pylama",
 				},
 				run_on_start = true,
 			})
@@ -76,9 +79,14 @@ return {
 							pylsp = {
 								plugins = {
 									pyflakes = { enabled = false },
-									pylint = { enabled = false },
+									pylint = { enabled = true },
 									black = { enabled = true },
 									isort = { enabled = true },
+									autopep8 = { enabled = false },
+									-- auto-completion options
+									jedi_completion = { fuzzy = true },
+									-- import sorting
+									pyls_isort = { enabled = true },
 								},
 							},
 						},
