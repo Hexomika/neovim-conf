@@ -7,10 +7,11 @@ return {
 			"~/Documents/projects/perso/python/*",
 			"~/Documents/projects/perso/lua/*",
 			"~/.config/nvim",
-			"~/.sshfs/swiv/projects/js/*", -- glob pattern is supported
-			"~/.sshfs/swiv/projects/js/capacitor/*", -- glob pattern is supported
-			"~/.sshfs/swiv/projects/python/*", -- glob pattern is supported
-			"~/.sshfs/swiv/argamato/clients/*", -- glob pattern is supported
+			"~/projects/js/*", -- glob pattern is supported
+			"~/projects/js/capacitor/*", -- glob pattern is supported
+			"~/projects/python/*", -- glob pattern is supported
+			"~/argamato/clients/*", -- glob pattern is supported
+			"~/Documents/docs/Docs/",
 		},
 		-- path to store history and sessions
 		datapath = vim.fn.stdpath("data"), -- ~/.local/share/nvim/

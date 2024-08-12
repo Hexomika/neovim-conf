@@ -21,6 +21,8 @@ return {
 				htmldjango = { "djlint" },
 				markdown = { "markdownlint" },
 				bash = { "beautysh" },
+				xml = { "xmlformatter" },
+				svg = { "xmlformatter" },
 				-- php = { "php_cs_fixer" },
 			},
 			format_on_save = format_options,
