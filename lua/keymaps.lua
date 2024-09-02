@@ -26,5 +26,5 @@ vim.api.nvim_set_keymap("n", "<leader>œ", ":OpenTmuxTerminalV<CR>", opts) -- op
 vim.api.nvim_set_keymap("n", "<leader>œn", ":OpenTmuxTerminalNewWindow<CR>", opts) -- open or close neovim menu
 vim.api.nvim_set_keymap("n", "<C-PageUp>", ":vertical resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-PageDown>", ":vertical resize -2<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>gv", ":DiffviewOpen<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>gvs", ":DiffviewOpen<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>gvx", ":DiffviewClose<CR>", opts)

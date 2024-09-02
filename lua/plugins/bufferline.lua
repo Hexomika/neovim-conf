@@ -47,6 +47,17 @@ return {
 		vim.api.nvim_set_keymap("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>", opts)
 		vim.api.nvim_set_keymap("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>", opts)
 		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 10<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 11<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 12<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 13<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 14<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 15<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 16<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 17<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 18<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 19<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 20<CR>", opts)
 		vim.api.nvim_set_keymap("n", "<leader>w", ":BufferLinePickClose<CR>", opts)
 	end,
 }
