@@ -25,7 +25,7 @@ return {
 				"cssls",
 				"yamlls",
 				"volar",
-				"tsserver",
+				"ts_ls",
 				"eslint",
 				"bashls",
 				"jinja_lsp",

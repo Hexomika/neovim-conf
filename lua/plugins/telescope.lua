@@ -8,14 +8,55 @@ return {
 	},
 	config = function()
 		local telescope = require("telescope")
+		telescope.setup({
+			defaults = {
+				-- configure to use ripgrep
+				vimgrep_arguments = {
+					"rg",
+					"--follow", -- Follow symbolic links
+					"--hidden", -- Search for hidden files
+					"--no-heading", -- Don't group matches by each file
+					"--with-filename", -- Print the file path with the matched lines
+					"--line-number", -- Show line numbers
+					"--column", -- Show column numbers
+					"--smart-case", -- Smart case search
 
-		telescope.setup({})
+					-- Exclude some patterns from search
+					"--glob=!**/.git/*",
+					"--glob=!**/.idea/*",
+					"--glob=!**/.vscode/*",
+					"--glob=!**/build/*",
+					"--glob=!**/dist/*",
+					"--glob=!**/yarn.lock",
+					"--glob=!**/package-lock.json",
+				},
+			},
+			pickers = {
+				find_files = {
+					hidden = true,
+					-- needed to exclude some files & dirs from general search
+					-- when not included or specified in .gitignore
+					find_command = {
+						"rg",
+						"--files",
+						"--hidden",
+						"--glob=!**/.git/*",
+						"--glob=!**/.idea/*",
+						"--glob=!**/.vscode/*",
+						"--glob=!**/build/*",
+						"--glob=!**/dist/*",
+						"--glob=!**/yarn.lock",
+						"--glob=!**/package-lock.json",
+					},
+				},
+			},
+		})
 		telescope.load_extension("fzf") -- search plugin
 		telescope.load_extension("conventional_commits") -- git plugin
 
 		local builtin = require("telescope.builtin")
 
-		vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>", {
+		vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files hidden=true<cr>", {
 			desc = "Telescope find files",
 		})
 		vim.keymap.set("n", "<leader>pg", "<cmd>Telescope git_files<cr>", {

@@ -4,14 +4,14 @@ return {
 		-- project directories
 		projects = {
 			"~/Documents/projects/hexolis/python/*",
+			"~/Documents/projects/hexolis/deployer/*",
 			"~/Documents/projects/perso/python/*",
 			"~/Documents/projects/perso/lua/*",
 			"~/.config/nvim",
-			"~/projects/js/*", -- glob pattern is supported
-			"~/projects/js/capacitor/*", -- glob pattern is supported
-			"~/projects/python/*", -- glob pattern is supported
-			"~/argamato/clients/*", -- glob pattern is supported
-			"~/Documents/docs/Docs/",
+			"~/Documents/projects/outofpluto/swiv/projects/js/capacitor/*",
+			"~/Documents/projects/outofpluto/swiv/projects/python/*",
+			"~/Documents/projects/outofpluto/swiv/argamato/clients/*",
+			"~/Documents/Documentations/",
 		},
 		-- path to store history and sessions
 		datapath = vim.fn.stdpath("data"), -- ~/.local/share/nvim/
