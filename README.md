@@ -6,6 +6,9 @@ Put the current repository into your ~/.config/nvim/ folder and then start neovi
 sudo apt install fzf
 sudo apt-get install ripgrep
 sudo apt install fd-find
+# Need to install rust for mason languages
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt install python3 python3-venv
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
