@@ -39,7 +39,6 @@ return {
 				"css_variables",
 				"docker_compose_language_service",
 				"dockerls",
-				-- "gitlab_ci_ls",
 				"intelephense",
 			}
 
@@ -66,6 +65,7 @@ return {
 					"flake8",
 					"sonarlint-language-server",
 					"pylama",
+					"eslint_d",
 				},
 				run_on_start = true,
 			})
