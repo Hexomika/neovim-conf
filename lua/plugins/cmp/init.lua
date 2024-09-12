@@ -12,7 +12,9 @@ return {
 		},
 		config = function()
 			local cmp = require("cmp")
+			local luasnip = require("luasnip")
 			local mapping = require("plugins.cmp.mapping")
+			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
 				completion = {
@@ -20,7 +22,7 @@ return {
 				},
 				snippet = {
 					expand = function(args)
-						require("luasnip").lsp_expand(args.body)
+						luasnip.lsp_expand(args.body)
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({

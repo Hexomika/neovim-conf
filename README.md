@@ -14,6 +14,9 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 
+# for copy paste
+sudo apt-get install xsel
+
 Into ~/.bashrc
 export PATH="$PATH:/opt/nvim-linux64/bin"
 source ~/.bashrc

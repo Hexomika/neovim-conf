@@ -42,7 +42,7 @@ return {
 				"intelephense",
 			}
 
-			require("mason").setup(lsp_servers)
+			require("mason").setup()
 
 			require("mason-lspconfig").setup({
 				ensure_installed = lsp_servers,
@@ -71,34 +71,39 @@ return {
 			})
 
 			require("mason-lspconfig").setup_handlers({
-				["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
-				["pylsp"] = function()
-					require("lspconfig").pylsp.setup({
-						capabilities = capabilities,
-						settings = {
-							pylsp = {
-								plugins = {
-									pyflakes = { enabled = false },
-									pylint = { enabled = true },
-									black = { enabled = true },
-									isort = { enabled = true },
-									autopep8 = { enabled = false },
-									-- auto-completion options
-									jedi_completion = { fuzzy = true },
-									-- import sorting
-									pyls_isort = { enabled = true },
-								},
-							},
-						},
-					})
-				end,
-				-- jinja
-				["jinja_lsp"] = function()
-					require("lspconfig").jinja_lsp.setup({
-						capabilities = capabilities,
-						filetypes = { "htmldjango", "jinja", "jinja.html" },
-					})
-				end,
+				-- ["lua_ls"] = require("plugins.lsp.servers.lua_ls").setup(capabilities),
+				-- ["pylsp"] = function()
+				-- 	require("lspconfig").pylsp.setup({
+				-- 		capabilities = capabilities,
+				-- 		settings = {
+				-- 			pylsp = {
+				-- 				plugins = {
+				-- 					pyflakes = { enabled = false },
+				-- 					pylint = { enabled = true },
+				-- 					black = { enabled = true },
+				-- 					isort = { enabled = true },
+				-- 					autopep8 = { enabled = false },
+				-- 					-- auto-completion options
+				-- 					jedi_completion = { fuzzy = true },
+				-- 					-- import sorting
+				-- 					pyls_isort = { enabled = true },
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	})
+				-- end,
+				-- -- jinja
+				-- ["jinja_lsp"] = function()
+				-- 	require("lspconfig").jinja_lsp.setup({
+				-- 		capabilities = capabilities,
+				-- 		filetypes = { "htmldjango", "jinja", "jinja.html" },
+				-- 	})
+				-- end,
+				-- ["volar"] = function()
+				-- 	require("lspconfig").volar.setup({
+				-- 		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+				-- 	})
+				-- end,
 
 				function(server_name)
 					require("lspconfig")[server_name].setup({ capabilities = capabilities })
@@ -124,11 +129,4 @@ return {
 			require("plugins.lsp.snippets.all")
 		end,
 	},
-	-- {
-	-- 	"Saecki/crates.nvim",
-	-- 	event = { "BufRead Cargo.toml" },
-	-- 	config = function()
-	-- 		require("crates").setup({})
-	-- 	end,
-	-- },
 }
