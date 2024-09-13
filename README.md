@@ -17,6 +17,11 @@ sudo tar -C /opt -xzf nvim-linux64.tar.gz
 # for copy paste
 sudo apt-get install xsel
 
+# git (note: need to test)
+curl -s https://packagecloud.io/install/repositories/dirk-thomas/vcstool/script.deb.sh | sudo bash
+sudo apt-get update
+sudo apt-get install python3-vcstool
+
 Into ~/.bashrc
 export PATH="$PATH:/opt/nvim-linux64/bin"
 source ~/.bashrc
@@ -61,6 +66,7 @@ gnome-terminal -- bash -c "
 
 ```
 :checkhealth = check the health of the nvim install
+:noa w = save without formatting
 ```
 
 Font: <https://github.com/tonsky/FiraCode>
