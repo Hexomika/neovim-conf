@@ -13,31 +13,15 @@ M.open_tmux_new_window = function()
 	os.execute("tmux new-window 'bash'")
 end
 
--- Define a custom command to list and choose an LSP to enable
--- TODO
-M.enable_manual_lsp = function()
-	-- List of available LSP servers (you can expand this list)
-	local lsp_servers = {
-		"pyright",
-		"tsserver",
-		"gopls",
-		"rust_analyzer",
-		"clangd",
-		"sumneko_lua",
-	}
-
-	-- Prompt the user to select an LSP server from the list
-	vim.ui.select(lsp_servers, { prompt = "Select LSP to enable:" }, function(choice)
-		if choice then
-			-- Setup the chosen LSP server
-			require("lspconfig")[choice].setup({})
-			-- Start the LSP server for the current buffer
-			vim.cmd("LspStart " .. choice)
-			print(choice .. " LSP enabled.")
-		else
-			print("No LSP selected.")
-		end
-	end)
+-- buffers switch keymap
+M.go_to_buffer = function()
+	local buf_number = vim.fn.input("Enter buffer number: ")
+	buf_number = tonumber(buf_number)
+	if buf_number then
+		vim.cmd("BufferLineGoToBuffer " .. buf_number)
+	else
+		print("Invalid buffer number")
+	end
 end
 
 return M
