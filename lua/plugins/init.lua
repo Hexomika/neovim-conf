@@ -21,7 +21,7 @@ local plugins = {
 	require("plugins.cmp"), -- auto complexion
 	require("plugins.lsp"),
 	require("plugins.lazydev"),
-	require("plugins.winbar"),
+	-- require("plugins.winbar"),
 	require("plugins.status_line"),
 	require("plugins.autopairs"),
 	require("plugins.colorizer"),
