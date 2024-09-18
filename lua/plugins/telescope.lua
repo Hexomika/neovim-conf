@@ -22,6 +22,7 @@ return {
 					"--smart-case", -- Smart case search
 
 					-- Exclude some patterns from search
+					"--glob=!**/node_modules/*",
 					"--glob=!**/.git/*",
 					"--glob=!**/.idea/*",
 					"--glob=!**/.vscode/*",
@@ -39,7 +40,9 @@ return {
 					find_command = {
 						"rg",
 						"--files",
+						"-u", -- ignore .gitignore
 						"--hidden",
+						"--glob=!**/node_modules/*",
 						"--glob=!**/.git/*",
 						"--glob=!**/.idea/*",
 						"--glob=!**/.vscode/*",
@@ -49,6 +52,12 @@ return {
 						"--glob=!**/package-lock.json",
 					},
 				},
+				grep_string = {
+					additional_args = { "--hidden" },
+				},
+				live_grep = {
+					additional_args = { "--hidden" },
+				},
 			},
 		})
 		telescope.load_extension("fzf") -- search plugin
@@ -56,7 +65,7 @@ return {
 
 		local builtin = require("telescope.builtin")
 
-		vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files hidden=true<cr>", {
+		vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>", {
 			desc = "Telescope find files",
 		})
 		vim.keymap.set("n", "<leader>pg", "<cmd>Telescope git_files<cr>", {

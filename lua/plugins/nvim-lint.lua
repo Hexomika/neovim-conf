@@ -27,7 +27,6 @@ return {
 		require("lint").linters.pylint.args = { "-m", "pylint", "-f", "json" }
 
 		eslint.args = {
-			"--no-warn-ignored",
 			"--format",
 			"json",
 			"--stdin",
