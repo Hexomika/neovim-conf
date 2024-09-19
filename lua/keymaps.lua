@@ -22,9 +22,10 @@ vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv'", opts) -- intervert lines
 vim.api.nvim_set_keymap("n", "<Esc>", ":nohlsearch<cr>", opts) -- clear highlights
 -- vim.api.nvim_set_keymap("n", "<C-w>", ":bdelete!<cr>", opts) -- removes buffer
 vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", opts) -- open or close neovim menu
-vim.api.nvim_set_keymap("n", "<leader>œ", ":OpenTmuxTerminalV<CR>", opts) -- open or close neovim menu
-vim.api.nvim_set_keymap("n", "<leader>œn", ":OpenTmuxTerminalNewWindow<CR>", opts) -- open or close neovim menu
+vim.api.nvim_set_keymap("n", "<leader>œo", ":OpenTmuxTerminalV<CR>", opts) -- open or close neovim menu
+vim.api.nvim_set_keymap("n", "<leader>œt", ":OpenTmuxTerminalNewWindow<CR>", opts) -- open or close neovim menu
 vim.api.nvim_set_keymap("n", "<C-PageUp>", ":vertical resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-PageDown>", ":vertical resize -2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>gvs", ":DiffviewOpen<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>gvx", ":DiffviewClose<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>œr", ":lua require('luasnip.loaders.from_vscode').load()<CR>", opts)
