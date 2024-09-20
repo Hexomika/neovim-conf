@@ -25,10 +25,10 @@ return {
 				svg = { "xmlformatter" },
 				-- php = { "php_cs_fixer" },
 			},
-			format_on_save = {
-				lsp_format = "fallback",
-				timeout_ms = 500,
-			},
+			-- format_on_save = {
+			-- 	lsp_format = "fallback",
+			-- 	timeout_ms = 500,
+			-- },
 			format_after_save = {
 				lsp_format = "fallback",
 			},
