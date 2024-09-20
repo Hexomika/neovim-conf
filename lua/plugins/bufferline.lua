@@ -1,7 +1,7 @@
 return {
 	"akinsho/bufferline.nvim",
 	version = "*",
-	dependencies = "nvim-tree/nvim-web-devicons",
+	dependencies = { "nvim-tree/nvim-web-devicons", "famiu/bufdelete.nvim" },
 	config = function()
 		local bufferline = require("bufferline")
 
@@ -38,6 +38,6 @@ return {
 		}
 
 		vim.api.nvim_set_keymap("n", "<leader>b", ":GoToBuffer<CR>", opts)
-		vim.api.nvim_set_keymap("n", "<leader>w", ":BufferLinePickClose<CR>", opts)
+		vim.api.nvim_set_keymap("n", "<leader>w", ":Bwipeout<CR>", opts)
 	end,
 }
