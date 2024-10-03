@@ -7,7 +7,7 @@ return {
 
 		bufferline.setup({
 			options = {
-				mode = "buffers",
+				mode = "tabs",
 				style_preset = bufferline.style_preset.default,
 				numbers = "ordinal",
 				separator_style = "thick",
@@ -20,16 +20,6 @@ return {
 					reveal = { "close" },
 				},
 				diagnostics = "nvim_lsp",
-				-- highlight = {
-				-- 	bg = {
-				-- 		attribite = "fg",
-				-- 		highlight = "Pmenu",
-				-- 	},
-				-- },
-				-- buffer_visible = {
-				-- 	fg = "<colour-value-here>",
-				-- 	bg = "<colour-value-here>",
-				-- },
 			},
 		})
 		local opts = {

@@ -43,7 +43,6 @@ local plugins = {
 	require("plugins.diffview"), -- git diffview
 	require("plugins.lightbulb"),
 	require("plugins.friendly-snippets"),
-	require("plugins.remote"),
 	require("plugins.venv-selector"),
 }
 

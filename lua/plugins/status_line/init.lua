@@ -25,8 +25,14 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_b = { "hostname", "branch", "diff", "diagnostics" },
+				lualine_c = {
+					{
+						"filename",
+						color = { fg = "#8EBD6B", gui = "bold" },
+						path = 1,
+					},
+				},
 				lualine_x = { "encoding", "fileformat", "filetype", components.lsp_server },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
