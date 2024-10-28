@@ -25,13 +25,8 @@ return {
 				svg = { "xmlformatter" },
 				-- php = { "php_cs_fixer" },
 			},
-			-- format_on_save = {
-			-- 	lsp_format = "fallback",
-			-- 	timeout_ms = 500,
-			-- },
-			format_after_save = {
-				lsp_format = "fallback",
-			},
+			format_on_save = nil,
+			format_after_save = nil,
 			-- Conform will notify you when a formatter errors
 			notify_on_error = true,
 			-- Conform will notify you when no formatters are available for the buffer

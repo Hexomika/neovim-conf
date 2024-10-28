@@ -27,11 +27,11 @@ local plugins = {
 	require("plugins.colorizer"),
 	require("plugins.comment"),
 	require("plugins.git"),
-	require("plugins.format"),
+	require("plugins.format"), -- conform
 	require("plugins.bufferline"),
 	-- require("plugins.neotest"),
 	require("plugins.trouble"),
-	require("plugins.nvim-lint"),
+	-- require("plugins.nvim-lint"), I don't know why it's in my plugins, i keep it just in case
 	require("plugins.others"),
 	-- require("plugins.project"),
 	require("plugins.neovim-project"),
@@ -44,6 +44,7 @@ local plugins = {
 	require("plugins.lightbulb"),
 	require("plugins.friendly-snippets"),
 	require("plugins.venv-selector"),
+	-- require("plugins.nvim-html-css"),
 }
 
 require("lazy").setup(plugins)

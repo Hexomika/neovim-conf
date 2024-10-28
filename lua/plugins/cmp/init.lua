@@ -75,6 +75,10 @@ return {
 				{ name = "path" },
 				{ name = "nvim_lsp_signature_help", max_item_count = 10 },
 				{ name = "calc" },
+				{
+					name = "html-css",
+					option = {},
+				},
 				-- { name = "cmp_ai" },
 			}),
 
