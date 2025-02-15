@@ -22,12 +22,12 @@ return {
 				diagnostics = "nvim_lsp",
 			},
 		})
-		local opts = {
-			noremap = true,
-			silent = true,
-		}
+		-- local opts = {
+		-- 	noremap = true,
+		-- 	silent = true,
+		-- }
 
-		vim.api.nvim_set_keymap("n", "<leader>b", ":GoToBuffer<CR>", opts)
-		vim.api.nvim_set_keymap("n", "<leader>w", ":Bwipeout<CR>", opts)
+		-- vim.api.nvim_set_keymap("n", "<leader>b", ":GoToBuffer<CR>", opts)
+		-- vim.api.nvim_et_keymap("n", "<leader>w", ":Bwipeout<CR>", opts)
 	end,
 }
