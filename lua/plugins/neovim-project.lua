@@ -13,6 +13,7 @@ return {
 			"~/Documents/projects/outofpluto/swiv/argamato/clients/*",
 			"~/Documents/Documentations/",
 			"~/projects/js/capacitor/*",
+			"~/argamato/clients/*/*",
 		},
 		-- path to store history and sessions
 		datapath = vim.fn.stdpath("data"), -- ~/.local/share/nvim/

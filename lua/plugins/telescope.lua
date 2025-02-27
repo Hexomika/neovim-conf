@@ -30,6 +30,9 @@ return {
 					"--glob=!**/dist/*",
 					"--glob=!**/yarn.lock",
 					"--glob=!**/package-lock.json",
+					"--glob=!**/env/*",
+					"--glob=!**/android/*",
+					"--glob=!**/ios/*",
 				},
 			},
 			pickers = {
@@ -50,6 +53,9 @@ return {
 						"--glob=!**/dist/*",
 						"--glob=!**/yarn.lock",
 						"--glob=!**/package-lock.json",
+						"--glob=!**/env/*",
+						"--glob=!**/android/*",
+						"--glob=!**/ios/*",
 					},
 				},
 				grep_string = {
